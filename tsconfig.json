@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "types": ["jest", "node", "@testing-library/jest-dom"],
+    "esModuleInterop": true
+  },
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
