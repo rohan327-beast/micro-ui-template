@@ -1,4 +1,4 @@
-const SERVICE_URL = import.meta.env.VITE_SERVICE_URL as string;
+const SERVICE_URL = import.meta.env.VITE_SERVICE_URL;
 
 if (!SERVICE_URL) {
   throw new Error(
