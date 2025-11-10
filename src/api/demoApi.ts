@@ -9,18 +9,14 @@ export const fetchDemo = async (
   token: string
 ): Promise<DemoModel[]> => {
   // 2. Use the variable to construct the full request URL.
-  try {
-    const response = await fetch(`${url}${userId}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    const result = response.json();
-    return result;
-  } catch (error) {
-    throw error;
-  }
+  const response = await fetch(`${url}${userId}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  const result = response.json();
+  return result;
 };

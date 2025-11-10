@@ -15,6 +15,11 @@ export default defineConfig({
       shared: ['react', 'react-dom'], // List of shared dependencies
     }),
   ],
+  server: {
+    // This allows all origins to access the dev server.
+    // Perfect for local development.
+    cors: true,
+  },
   build: {
     modulePreload: false,
     target: 'esnext',

@@ -5,10 +5,10 @@ import ErrorPage from '../shared/Error';
 import Loading from '../shared/Loding';
 import { config } from '../../config';
 
-const Demo: React.FC<{}> = () => {
+const Demo: React.FC = () => {
   const userId = 'ba96aed5-b147-405e-b2ae-dcca1703a569'; // Replace with actual user ID logic
   const { isPending, isError, data, error } = useQuery({
-    queryKey: ['menu'],
+    queryKey: ['menu', userId],
     queryFn: () => fetchDemo(userId, config.serviceUrl, 'token'), // Adjusted to match expected function signature
     retry: 3, // Retry up to 3 times on failure
     staleTime: 0.5 * 60 * 1000, // Data is fresh for 1 minutes
